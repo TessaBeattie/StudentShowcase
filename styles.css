@@ -1,0 +1,235 @@
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap');
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold:    #E8B84B;
+  --teal:    #4A9B8E;
+  --brown:   #6B4C3B;
+  --dark:    #1a1a1a;
+  --light:   #f5f5f3;
+  --card-bg: #ffffff;
+  --wavy-teal:  #4A9B8E;
+  --wavy-gold:  #E8B84B;
+  --wavy-brown: #6B4C3B;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  min-height: 100vh;
+}
+
+#BGSU{
+    position:relative;
+    position:absolute;
+    width:15%;
+    padding:1em;
+    
+}
+/* ── Home Button ── */
+.home-btn {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: #ccc;
+  color: var(--dark);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 8px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  z-index: 100;
+  transition: background 0.2s;
+}
+.home-btn:hover { background: #bbb; }
+
+/* ── Page Header ── */
+.page-header {
+  text-align: center;
+  padding: 40px 20px 10px;
+  position: relative;
+}
+.page-header .ghost-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 12vw, 9rem);
+  letter-spacing: 0.04em;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.12;
+}
+.page-header .sub-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+/* color variants for ghost text */
+.ghost-teal   { color: var(--teal); }
+.ghost-gold   { color: var(--gold); }
+.ghost-brown  { color: var(--brown); }
+
+/* ── Card Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 28px;
+  max-width: 960px;
+  margin: 48px auto 60px;
+  padding: 0 28px;
+}
+
+/* ── Card ── */
+.card{
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.left{
+    margin:1em;
+    width:40%;
+    height:40%;
+}
+
+.right{
+    margin:1em;
+    width:40%;
+    height:40%;
+}
+
+/* video icon badge */
+.video-icon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.video-icon span {
+  display: block;
+  width: 22px; height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+}
+
+.icon-gold   { color: var(--gold); }
+.icon-brown  { color: var(--brown); }
+
+/* card image */
+.card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  background: #ccc;
+  margin-top: 8px;
+}
+
+/* ── Bottom Home button ── */
+.footer-home {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 960px;
+  margin: 0 auto 40px;
+  padding: 0 28px;
+}
+.footer-home a {
+  background: #ccc;
+  color: var(--dark);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 8px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.footer-home a:hover { background: #bbb; }
+
+/* ── HOME PAGE ── */
+.home-hero {
+  width: 100%;
+  height: 52vw;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.home-logo {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,.5);
+}
+.home-logo strong { color: #fff; }
+
+.hero-wrap { position: relative; }
+
+.home-content {
+  text-align: center;
+}
+.home-content .dept {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  letter-spacing: 0.35em;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 4px;
+}
+.home-content h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 10vw, 7rem);
+  letter-spacing: 0.06em;
+  line-height: 0.9;
+  color: var(--dark);
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 48px;
+  max-width: 700px;
+  margin: 48px auto 60px;
+  padding: 0 24px;
+}
+.nav-btn {
+  background: var(--gold);
+  color: var(--dark);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 16px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: filter 0.2s, transform 0.15s;
+}
+.nav-btn:hover { filter: brightness(1.1); transform: translateY(-2px); }
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .nav-grid { grid-template-columns: 1fr; }
+}
